@@ -34,6 +34,8 @@ class CombinedFormView(generics.ListAPIView):
 
 
 class FillFormAPIView(APIView):
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
 
     def post(self, request, form_id):
         try:

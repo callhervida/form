@@ -41,7 +41,7 @@ class Select(models.Model):
 
 class File(models.Model):
     field = models.ForeignKey(Field, on_delete=models.DO_NOTHING)
-    value = models.FileField(blank=True, null=True)
+    value = models.URLField(blank=True, null=True)
     title = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):

@@ -12,13 +12,12 @@ class FormAdmin(admin.ModelAdmin):
 class FieldAdmin(admin.ModelAdmin):
     list_display = ('title', 'active', 'order', 'form')
     search_fields = ('title',)
-    ordering = ['title', ]
+    ordering = ['form', ]
 
 
 class ValueAdmin(admin.ModelAdmin):
     list_display = ('field', 'value')
     search_fields = ('field',)
-    ordering = ['field', ]
 
 
 class SelectAdmin(admin.ModelAdmin):
